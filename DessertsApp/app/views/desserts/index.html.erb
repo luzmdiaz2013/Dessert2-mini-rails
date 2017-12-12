@@ -1,7 +1,7 @@
 <h1> All our Delicious Desserts!</h1>
 
 <ul>
-  <% @desserts.each do |user| %>
-  <li><%= link_to user.name, user_path(user) %></li>
+  <% @desserts.each do |dessert| %>
+  <li><%= link_to @dessert.name, dessert_path(dessert) %></li>
   <% end %>
 </ul>
