@@ -1,47 +1,47 @@
 class DessertsController < ApplicationController
   def index
-    @desserts = User.all
+    @desserts = Dessert.all
   end
 
   def show
-    @dessert = User.find(params[:id])
+    @dessert = Dessert.find(params[:id])
   end
 
   def new
-    @dessert = User.new
+    @dessert = Dessert.new
   end
 
   def create
-    @dessert = User.new(user_params)
+    @dessert = Dessert.new(dessert_params)
     if @dessert.save
-      redirect_to user_path(@dessert)
+      redirect_to dessert_path(@dessert)
     else
       render :new
   end
 
   def edit
-    @dessert = User.find(params [:id])
+    @dessert = Dessert.find(params [:id])
   end
 
   def update
-    @dessert = User.find(params [:id])
-    if @dessert.update(user_params)
-      redirect_to user_path(@dessert)
+    @dessert = Dessert.find(params [:id])
+    if @dessert.update(dessert_params)
+      redirect_to dessert_path(@dessert)
     else
-      redirect_to edit_user_path(@dessert)
+      redirect_to edit_dessert_path(@dessert)
     end
   end
 
   def destroy
-    @dessert = User.find_by(params[:id])
+    @dessert = Dessert.find_by(params[:id])
     @dessert.delete
-    redirect_ users_path
+    redirect_ desserts_path
   end
 
 
   private
-    def user_params
-      params.require(:user).permit(:name, :flavor)
+    def Dessert_params
+      params.require(:dessert).permit(:name, :flavor)
     end
   end
 

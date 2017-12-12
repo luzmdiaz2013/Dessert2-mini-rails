@@ -1,9 +1,8 @@
-class CreateUsers < ActiveRecord::Migration[5.1]
+class CreateDesserts < ActiveRecord::Migration[5.1]
   def change
-    create_table :users do |t|
+    create_table :desserts do |t|
       t.string :name
       t.string :flavor
-
 
       t.timestamps
     end

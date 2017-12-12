@@ -8,6 +8,8 @@
 
 
 
-User.create(name: 'Death by Chocolate', flavor: "Chocolate Cake" )
-User.create(name: 'American Pie', flavor: "Apple Pie" )
-User.create(name: 'Angel Food', flavor: "Vanilla Cake" )
+Dessert.create(name: 'Death by Chocolate', flavor: "Chocolate Cake" )
+Dessert.create(name: 'American Pie', flavor: "Apple Pie" )
+Dessert.create(name: 'Angel Food', flavor: "Vanilla Cake" )
+
+
