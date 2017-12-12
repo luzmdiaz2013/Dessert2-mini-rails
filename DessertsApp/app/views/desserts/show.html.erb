@@ -2,10 +2,9 @@
 
 <h2>Flavor: <%= @dessert.flavor %></h2>
 
-<%= link_to "Edit #{@dessert.name}",
-edit_user_path(@dessert) %>
+<%= link_to "Edit #{@dessert.name}", edit_dessert_path(@dessert) %>
 
-<%= form_for @dessert html: {method: "delete"} do |f| %>
+<%= form_for @dessert, html: {method: "delete"} do |f| %>
   <%= f.submit "Delete #{@dessert.name}???" %>
 <% end %>
 

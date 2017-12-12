@@ -1,9 +1,5 @@
 <h1> Edit <%= @dessert.name%>!</h1>
 
-<%= form_for @dessert do |f| %>
-  <%= f.text_field :name %>
-  <%= f.text_field :flavor %>
-  <%= f.submit "Edit" %>
-<% end %>
+
 
 <%= render partial: 'form' %>

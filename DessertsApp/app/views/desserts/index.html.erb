@@ -2,6 +2,8 @@
 
 <ul>
   <% @desserts.each do |dessert| %>
-  <li><%= link_to @dessert.name, dessert_path(dessert) %></li>
+  <li><%= link_to dessert.name, dessert_path(dessert) %></li>
   <% end %>
 </ul>
+
+<%= link_to "New", new_dessert_path %>

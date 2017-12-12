@@ -28,19 +28,19 @@ class DessertsController < ApplicationController
     if @dessert.update(dessert_params)
       redirect_to dessert_path(@dessert)
     else
-      redirect_to edit_dessert_path(@dessert)
+      redirect_to dessert_edit_path(@dessert)
     end
   end
 
   def destroy
-    @dessert = Dessert.find_by(params[:id])
+    @dessert = Dessert.find(params[:id])
     @dessert.delete
-    redirect_ desserts_path
+    redirect_to desserts_path
   end
 
 
   private
-    def Dessert_params
+    def dessert_params
       params.require(:dessert).permit(:name, :flavor)
     end
   end
