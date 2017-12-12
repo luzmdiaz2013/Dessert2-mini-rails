@@ -1,0 +1,12 @@
+<h1><%= @dessert.name %></h1>
+
+<h2>Flavor: <%= @dessert.flavor %></h2>
+
+<%= link_to "Edit #{@dessert.name}",
+edit_user_path(@dessert) %>
+
+<%= form_for @dessert html: {method: "delete"} do |f| %>
+  <%= f.submit "Delete #{@dessert.name}???" %>
+<% end %>
+
+<%= link_to "All Desserts", users_path %>

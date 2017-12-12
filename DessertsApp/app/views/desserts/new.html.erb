@@ -1,0 +1,12 @@
+
+<h2>Create a Dessert</h2>
+
+<%= form_for @dessert do |form| %>
+  <%= form.text_field :name, placeholder: 'Name' %>
+  <br>
+  <%= form.text_area :flavor, placeholder: 'Flavor' %>
+
+  <br>
+  <%= submit_tag 'Create a Dessert!' %>
+<% end %>
+
